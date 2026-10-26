@@ -1,0 +1,43 @@
+column,definition,type,missing_expected
+order_id,Unique order identifier,ID,No
+order_timestamp,Timestamp when the order was placed,Datetime,No
+order_date,Order date,Date,No
+order_hour,Hour of order placement,Integer,No
+day_of_week,Day of week,Category,No
+is_weekend,Weekend indicator (1/0),Binary,No
+day_type,Weekday or Weekend,Category,No
+peak_hour,Peak period indicator using 11–14 and 18–21,Binary,No
+customer_id,Customer identifier,ID,No
+customer_age,Customer age,Integer,No
+customer_type,"New, Regular or Premium",Category,No
+customer_rating,Customer rating after completed order,Numeric,Yes for cancelled
+restaurant_id,Restaurant identifier,ID,No
+restaurant_type,Restaurant type,Category,No
+restaurant_category,Primary restaurant category,Category,No
+restaurant_rating,Restaurant rating,Numeric,No
+restaurant_preparation_time_min,Restaurant preparation time,Numeric,No
+items_count,Number of items in order,Integer,No
+driver_id,Delivery partner identifier,ID,No
+driver_experience_months,Driver experience in months,Numeric,No
+driver_rating,Delivery partner rating,Numeric,No
+city,City,Category,No
+delivery_area,Delivery area,Category,No
+distance_km,Delivery distance in kilometres,Numeric,No
+weather,Weather condition,Category,No
+traffic_level,Traffic condition,Category,No
+estimated_delivery_time_min,Estimated delivery duration,Numeric,No
+actual_delivery_time_min,Actual delivery duration,Numeric,Yes for cancelled
+delivery_delay_min,Actual minus estimated delivery time,Numeric,Yes for cancelled
+late_delivery,1 when delay > 5 min; validated against source flag,Binary,Yes for cancelled
+delay_category,On Time / Slight / Moderate / Severe / Cancelled,Category,No
+order_status,Completed or Cancelled,Category,No
+is_cancelled,Cancellation indicator (1/0),Binary,No
+cancellation_reason,Reason for cancellation; Not Cancelled for completed orders,Category,No
+subtotal,Order subtotal,Currency/amount,No
+discount_percent,Discount percentage,Numeric,No
+tax_amount,Tax amount,Currency/amount,No
+service_fee,Service fee,Currency/amount,No
+delivery_fee,Delivery fee,Currency/amount,No
+order_total,Total order value,Currency/amount,No
+tip_amount,Tip amount; missing for cancelled orders,Currency/amount,Yes for cancelled
+payment_method,Payment method,Category,No
